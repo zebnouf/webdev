@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Acceuil</title>
+	<link rel="stylesheet" type="text/css" href="style.css" >
+	<script type="text/javascript" src="public/frontend/js/all.js"> </script> 
+	<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="index.php"><span>Ha</span>sernet</a>
+		</div>
+
+		<div class="search-screen">
+			<span class="search-icon">
+				<i class="fa fa-search" class="icon"></i>
+			</span>
+			<div id="search-box">
+				<form method="GET" action="index.php?search">
+					<input type="text" name="" class="input" placeholder="Rechercher" autofocus="autofocus">
+					<button class="btn-search"><i class="fa fa-arrow-right"></i></button>
+				</form>			
+			</div>
+
+		</div>
+
+		<div id="nav" onclick="toggle()">	
+			
+
+			<ul>
+					<li  class="activ"><a href="index.html">ACCUEIL</a></li>
+					<li class="link" ><a href="tutoriel.html">TUTOS</a></li>
+					<li class="link" ><a href="tutoriel.html">ACTUALITES</a></li>
+			</ul>			
+		</div>
+
+		<div id="burgerct" onclick="toggle()">
+			<div id="burger"></div>		
+		</div>
+
+	</header>
+
+	<section>
+		<div class="blog-card">
+			<div class="inner-part">
+				<label for="" class="img">
+					<img src="public/frontend/image/articles/53.jpg">
+				</label>
+				<div class="content">
+					<span>24 December 2020</span>
+					<div class="title">Apprendre à utiliser <strong>Sketch</strong> </div>
+					<div class="text">
+						La méthode la plus simple et la plus pratique pour choisir une couleur consiste à taper son nom (in english, of course).
+						Le seul
+					</div>
+					<a href="#">Lire la suite</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="inner-footer">
+			<div class="footer-items">
+				<h1>Hayoub Service Internet</h1>
+				<p>
+					mot-cléAS. Lorsqu'on utilise une fonction d'agrégat, il est possible de regrouper des données avecGROUP BY. Après un groupement de données, on peut filtrer le résultat avecHAVING. Il ne faut pas le confondre avec WHERE qui filtre avant le groupement des données. 
+				</p>
+			</div>
+			<div class="footer-items">
+				<h2>Liens rapides</h2>
+				<div class="border"></div>
+				<ul>
+					<a href="#"><li>Accueil</li></a>
+					<a href="#"><li>A propos de moi</li></a>
+					<a href="#"><li>Services</li></a>
+					<a href="index.php?url=portfolio"><li>Portfolio</li></a>
+					<a href="#"><li>Conctact</li></a>
+				</ul>
+			</div>
+			<div class="footer-items">
+				<h2>Newsletter</h2>
+				<div class="border"></div>
+				<p>Entrez votre email pour recevoir les news et les mises à jours</p>
+				<form>
+					<div class="email-box">
+						<span><i class="fa fa-envelope"></i></span>
+						<input class="tbox" type="email" name="" placeholder="Votre email">
+						<button class="btn">SOUSCRIVEZ</button>
+					</div>
+				</form>
+			</div>
+			<div class="footer-items">
+				<h2>Contact</h2>
+				<div class="border"></div>
+				<ul>
+					<li><i class="fa fa-map-marker"></i> Abidjan Port-bouët</li>
+					<li><i class="fa fa-phone"></i> +225 09367277 / +225 46823646</li>
+					<li><i class="fa fa-envelope"></i>contact@hasernet.com</li>
+				</ul>
+				<div class="social-media">
+					<a href=""><li><i class="fab fa-facebook" aria-hidden="true"></i></li></a>
+					<a href=""><li><i class="fab fa-twitter" aria-hidden="true"></i></li></a>
+					<a href=""><li><i class="fab fa-instagram" aria-hidden="true"></i></li></a>
+					<a href=""><li><i class="fab fa-youtube" aria-hidden="true"></i></li></a>
+				</div>
+			</div>
+		</div>
+			<div class="footer-bottom">
+				Copyright &copy; Hayoub Service Internet. Tout droit reservé.
+			</div>
+	</footer>		
+	
+
+<script type="text/javascript" src="app.js"> </script> 
+<script type="text/javascript">
+	$('.search-icon').on('click', function(){
+		$('#search-box').toggleClass('active');
+		$('.search-icon .fa-search').toggleClass('fa-times');
+	});
+	$('.search-icon').on('click', function(){
+		$('#search-box').remove('active');
+		$('.search-icon .fa-times').toggleClass('fa-search');
+	});
+	$('.input').keyup(function(){
+		if ($(this).val() != "") {
+			$('.btn-search').css('opacity', 1);
+			$('.btn-search').css('transform', "rotate(0deg)");
+		}else {
+			$('.btn-search').css("opacity", 0);
+			$('.btn-search').css('transform', "rotate(45deg)");
+		}
+	});	
+</script>
+
+</body>
+</html>
